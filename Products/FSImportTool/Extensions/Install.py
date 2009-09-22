@@ -1,20 +1,11 @@
+
 from Products.CMFCore.utils import getToolByName
-from StringIO import StringIO
-import string
 
-def install(self):
-    """Add the tool"""
-    out = StringIO()
+def install(portal):
+    portal_setup = getToolByName(portal, 'portal_setup')
+    import_context = portal_setup.getImportContextID()
+    portal_setup.setImportContext(
+            'profile-Products.FSImportTool:default')
+    portal_setup.runAllImportSteps()
+    portal_setup.setImportContext(import_context)
 
-    # Add the tool
-    urltool = getToolByName(self, 'portal_url')
-    portal = urltool.getPortalObject();
-    try:
-        portal.manage_delObjects('portal_fsimport')
-        out.write("Removed old portal_fsimport tool\n")
-    except:
-        pass  # we don't care if it fails
-    portal.manage_addProduct['FSImportTool'].manage_addTool('FSImport Tool', None)
-    out.write("Adding FSImport Tool\n")
-
-    return out.getvalue()
