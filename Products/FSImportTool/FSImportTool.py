@@ -113,6 +113,8 @@ class FSImportTool(UniqueObject, SimpleItem):
         # Create/replace file
         file = open(os.path.join(path, obj.getId()), 'wb')
         if (type(data) == type('') or type(data) == type(u'')):
+            if type(data) is unicode:
+                data = data.encode('utf-8')
             file.write(data)
         else:
             while data is not None:
