@@ -1,0 +1,25 @@
+FSImportTool-0.7
+  - collection-structure-redesign-1 (Oct. 22, 2009)
+    - handle possible CNXML in Unicode
+
+FSImportTool-0.6
+  - upgrade to Plone 2.5
+  - allow export to an existing directory, overwriting files as needed.
+
+FSImportTool-0.5
+  - i18n Translation Support
+
+FSImportTool-0.4
+  - Renamed RISA to Rhaptos
+
+FSImportTool-0.3
+  - Added README
+  - Added license info
+
+FSImportTool-0.2
+  - New, simpler API
+  - Unit tests!
+  - Use the content_type_registry instead of guessing ourselves at portal_type
+
+FSImportTool-0.1
+  - Initial release (separated from CNXPloneSite)

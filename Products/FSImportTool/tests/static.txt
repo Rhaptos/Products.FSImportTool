@@ -1,0 +1,16 @@
+Static Implementation Tests
+===========================
+ 	
+Let's just make sure that our static views are working as expected.
+	
+The first thing we need to do is to make sure the interfaces are
+being correctly implemented::
+ 	
+    >>> from Products.FSImportTool.FSImportTool import FSImportTool
+    >>> FSImportTool.id == 'portal_fsimport'
+    True
+    >>> FSImportTool.meta_type == 'FSImport Tool'
+    True
+    >>> FSImportTool.manage_overview
+    <PageTemplateFile at manage_overview>
+
