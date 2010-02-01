@@ -1,3 +1,6 @@
+FSImportTool-0.8
+  - generic setup refactor. Rhaptos 2.0 release
+
 FSImportTool-0.7
   - collection-structure-redesign-1 (Oct. 22, 2009)
     - handle possible CNXML in Unicode
