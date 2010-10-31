@@ -17,7 +17,7 @@ from Products.CMFCore.utils import getToolByName
 from OFS.SimpleItem import SimpleItem
 from Globals import InitializeClass
 from Products.PageTemplates.PageTemplateFile import PageTemplateFile
-from Products.CMFCore.CMFCorePermissions import View, ManagePortal
+from Products.CMFCore.permissions import View, ManagePortal
 from interfaces.portal_fsimport import portal_fsimport as IFSImportTool
 
 class FSImportError(Exception):
