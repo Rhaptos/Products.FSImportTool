@@ -10,6 +10,7 @@ Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
 
 import os
 import mimetypes
+from zope.interface import implements
 import zLOG
 import AccessControl
 from Products.CMFCore.utils import UniqueObject
@@ -28,7 +29,7 @@ class FSExportError(Exception):
 
 class FSImportTool(UniqueObject, SimpleItem):
 
-    __implements__ = (IFSImportTool)
+    implements(IFSImportTool)
 
     id = 'portal_fsimport'
     meta_type = 'FSImport Tool'
